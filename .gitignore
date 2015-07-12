@@ -1,0 +1,6 @@
+vendor
+.bundle
+
+*.wav
+*.mp3
+*.flac

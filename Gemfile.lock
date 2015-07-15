@@ -1,10 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    narray (0.6.1.1)
+    ruby-fftw3 (0.4.2)
+      narray
+    stackprof (0.2.7)
     wav-file (0.0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  ruby-fftw3
+  stackprof
   wav-file

@@ -1,6 +1,4 @@
 require 'wav-file'
-require 'stackprof'
-
 require_relative 'fft.rb'
 
 f = open("./sounds/make_it-15.wav")
@@ -15,8 +13,5 @@ n = 2
 n = n * 2 until n >= data.length
 data += Array.new(n - data.length, 0)
 
-StackProf.run(mode: :cpu, out: 'stackprof-cpu.dump') do
-  ffter = Puri::FFT.new(data.size, 44100)
-  fft = ffter.fft(data)
-end
-#  puts "#{i} #{a}"
+ffter = Puri::FFT.new(data.size, 44100)
+fft = ffter.fft(data)
